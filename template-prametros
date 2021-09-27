@@ -1,0 +1,26 @@
+--model_name_or_path /data/sedonoso/modelos/
+--max_seq_length 512
+--output_dir
+--overwrite_output_dir
+--do_train
+--do_eval
+--do_predict
+--evaluation_strategy epoch
+--gradient_accumulation_steps (for big models with tiny batch size)
+--per_device_batch_size ( large 8, xlarge 4)
+--learning_rate (1e-6 large)
+--weight_decay
+--adam_beta1 (default 0.9)
+--adam_beta2 (default 0.999)
+--adam_epsilon (default 1e-8)
+--num_train_epochs 4
+--warmup_ratio 0.1
+--load_best_model_at_end True
+--log_level info
+--logging_dir
+--save_strategy epoch
+--seed
+--fp16 true
+
+  --train_file /data/sedonoso/datasets/QA/TAR/train-v1.1-es.json \
+  --validation_file /data/sedonoso/datasets/QA/TAR/dev-v1.1-es.json \

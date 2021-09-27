@@ -1,0 +1,15 @@
+python train.py \
+    --student_type distilbert \
+    --student_config /data/sedonoso/memoria/distillation/training_configs/distillbert-base-uncased.json \
+    --teacher_type bert \
+    --teacher_name /home/sedonoso/bert-models/pytorch \
+    --student_pretrained_weights /data/sedonoso/memoria/distillation/serialization_dir/tf_bert-base-uncased_0247911.pth \
+    --alpha_ce 5.0 --alpha_mlm 2.0 --alpha_cos 1.0 --alpha_clm 0.0 --mlm \
+    --dump_path /home/sedonoso/resul-final-distill \
+    --gradient_accumulation_steps 256 \
+    --batch_size 16 \
+    --data_file /home/sedonoso/data/binarized_text.bert-base-uncased.pickle \
+    --token_counts /home/sedonoso/data/token_counts.bert-base-uncased.pickle \
+    --seed 42 \
+    --fp16 \
+    --force # overwrites the `dump_path` if it already exists.

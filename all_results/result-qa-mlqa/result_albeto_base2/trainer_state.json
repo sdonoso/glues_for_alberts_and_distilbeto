@@ -1,0 +1,187 @@
+{
+  "best_metric": null,
+  "best_model_checkpoint": null,
+  "epoch": 3.9998206278026904,
+  "global_step": 11148,
+  "is_hyper_param_search": false,
+  "is_local_process_zero": true,
+  "is_world_process_zero": true,
+  "log_history": [
+    {
+      "epoch": 0.19,
+      "learning_rate": 1.4127740705433746e-05,
+      "loss": 4.0781,
+      "step": 500
+    },
+    {
+      "epoch": 0.38,
+      "learning_rate": 2.8427073403241182e-05,
+      "loss": 2.2935,
+      "step": 1000
+    },
+    {
+      "epoch": 0.57,
+      "learning_rate": 2.8591414944356122e-05,
+      "loss": 2.0515,
+      "step": 1500
+    },
+    {
+      "epoch": 0.76,
+      "learning_rate": 2.700158982511924e-05,
+      "loss": 1.941,
+      "step": 2000
+    },
+    {
+      "epoch": 0.95,
+      "learning_rate": 2.5411764705882355e-05,
+      "loss": 1.8792,
+      "step": 2500
+    },
+    {
+      "epoch": 1.0,
+      "eval_exact_match": 52.19796503012941,
+      "eval_f1": 71.94158689271379,
+      "step": 2621
+    },
+    {
+      "epoch": 1.14,
+      "learning_rate": 2.3821939586645468e-05,
+      "loss": 1.7361,
+      "step": 3000
+    },
+    {
+      "epoch": 1.34,
+      "learning_rate": 2.223529411764706e-05,
+      "loss": 1.6707,
+      "step": 3500
+    },
+    {
+      "epoch": 1.53,
+      "learning_rate": 2.0645468998410176e-05,
+      "loss": 1.6627,
+      "step": 4000
+    },
+    {
+      "epoch": 1.72,
+      "learning_rate": 1.9055643879173293e-05,
+      "loss": 1.6524,
+      "step": 4500
+    },
+    {
+      "epoch": 1.91,
+      "learning_rate": 1.746581875993641e-05,
+      "loss": 1.6242,
+      "step": 5000
+    },
+    {
+      "epoch": 2.0,
+      "eval_exact_match": 53.08702953669861,
+      "eval_f1": 73.44277176147263,
+      "step": 5242
+    },
+    {
+      "epoch": 2.1,
+      "learning_rate": 1.5879173290937997e-05,
+      "loss": 1.5164,
+      "step": 5500
+    },
+    {
+      "epoch": 2.29,
+      "learning_rate": 1.4289348171701114e-05,
+      "loss": 1.4374,
+      "step": 6000
+    },
+    {
+      "epoch": 2.48,
+      "learning_rate": 1.269952305246423e-05,
+      "loss": 1.4248,
+      "step": 6500
+    },
+    {
+      "epoch": 2.67,
+      "learning_rate": 1.1109697933227345e-05,
+      "loss": 1.4257,
+      "step": 7000
+    },
+    {
+      "epoch": 2.86,
+      "learning_rate": 9.519872813990462e-06,
+      "loss": 1.4115,
+      "step": 7500
+    },
+    {
+      "epoch": 3.0,
+      "eval_exact_match": 53.86743060357602,
+      "eval_f1": 73.98644933131065,
+      "step": 7863
+    },
+    {
+      "epoch": 3.05,
+      "learning_rate": 7.930047694753578e-06,
+      "loss": 1.384,
+      "step": 8000
+    },
+    {
+      "epoch": 3.24,
+      "learning_rate": 6.340222575516694e-06,
+      "loss": 1.2455,
+      "step": 8500
+    },
+    {
+      "epoch": 3.43,
+      "learning_rate": 4.75039745627981e-06,
+      "loss": 1.231,
+      "step": 9000
+    },
+    {
+      "epoch": 3.62,
+      "learning_rate": 3.1605723370429253e-06,
+      "loss": 1.2514,
+      "step": 9500
+    },
+    {
+      "epoch": 3.82,
+      "learning_rate": 1.5707472178060413e-06,
+      "loss": 1.2732,
+      "step": 10000
+    },
+    {
+      "epoch": 4.0,
+      "eval_exact_match": 52.711646745036056,
+      "eval_f1": 73.55309957156543,
+      "step": 10484
+    },
+    {
+      "epoch": 3.77,
+      "learning_rate": 1.9704973587162366e-06,
+      "loss": 1.9317,
+      "step": 10500
+    },
+    {
+      "epoch": 3.95,
+      "learning_rate": 4.754310774444334e-07,
+      "loss": 1.5726,
+      "step": 11000
+    },
+    {
+      "epoch": 4.0,
+      "eval_exact_match": 53.443708609271525,
+      "eval_f1": 72.94855944750569,
+      "step": 11148
+    },
+    {
+      "epoch": 4.0,
+      "step": 11148,
+      "total_flos": 5908764450871296.0,
+      "train_loss": 0.0944424649058254,
+      "train_runtime": 489.034,
+      "train_samples_per_second": 729.553,
+      "train_steps_per_second": 22.796
+    }
+  ],
+  "max_steps": 11148,
+  "num_train_epochs": 4,
+  "total_flos": 5908764450871296.0,
+  "trial_name": null,
+  "trial_params": null
+}

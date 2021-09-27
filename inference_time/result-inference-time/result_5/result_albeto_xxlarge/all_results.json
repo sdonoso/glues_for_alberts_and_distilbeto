@@ -1,0 +1,13 @@
+{
+    "init_mem_cpu_alloc_delta": 0,
+    "init_mem_cpu_peaked_delta": 0,
+    "predict_accuracy": 0.9659801397572637,
+    "predict_f1": 0.8898426323319027,
+    "predict_loss": 0.08326342701911926,
+    "predict_precision": 0.8777046095954845,
+    "predict_recall": 0.902321083172147,
+    "predict_runtime": 459.0485,
+    "predict_samples_per_second": 0.218,
+    "test_mem_cpu_alloc_delta": 102477824,
+    "test_mem_cpu_peaked_delta": 112406528
+}

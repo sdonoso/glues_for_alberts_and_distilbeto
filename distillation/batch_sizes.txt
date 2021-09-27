@@ -1,0 +1,3 @@
+Estables:
+batch_size      Gradient Acummulation Steps
+    10                      20

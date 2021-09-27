@@ -1,0 +1,68 @@
+python run_xnli.py \
+  --model_name_or_path /data/sedonoso/modelos/albeto_xxlarge \
+  --max_seq_length 512 \
+  --output_dir /data/sedonoso/memoria/all_results/result-xnli/result_albeto_xxlarge \
+  --use_fast_tokenizer \
+  --language es \
+  --train_language es \
+  --do_train \
+  --do_eval \
+  --evaluation_strategy epoch \
+  --learning_rate 1e-6 \
+  --per_device_train_batch_size 2 \
+  --gradient_accumulation_steps 8 \
+  --weight_decay 0.01 \
+  --num_train_epochs 4.0 \
+  --warmup_ratio 0.1 \
+  --load_best_model_at_end True \
+  --logging_dir /data/sedonoso/memoria/all_results/result-xnli/result_albeto_xxlarge \
+  --save_strategy epoch \
+  --seed 42 \
+  --fp16 true \
+  --cache_dir /data/sedonoso/cache \
+#;
+python run_xnli.py \
+  --model_name_or_path /data/sedonoso/modelos/albeto_xlarge \
+  --max_seq_length 512 \
+  --output_dir /data/sedonoso/memoria/all_results/result-xnli/result_albeto_xlarge \
+  --use_fast_tokenizer \
+  --language es \
+  --train_language es \
+  --do_train \
+  --do_eval \
+  --evaluation_strategy epoch \
+  --learning_rate 1e-6 \
+  --per_device_train_batch_size 4 \
+  --gradient_accumulation_steps 4 \
+  --weight_decay 0.01 \
+  --num_train_epochs 4.0 \
+  --warmup_ratio 0.1 \
+  --load_best_model_at_end True \
+  --logging_dir /data/sedonoso/memoria/all_results/result-xnli/result_albeto_xlarge \
+  --save_strategy epoch \
+  --seed 42 \
+  --fp16 \
+  --cache_dir /data/sedonoso/cache \
+;
+python run_xnli.py \
+  --model_name_or_path /data/sedonoso/modelos/albeto_large \
+  --max_seq_length 512 \
+  --output_dir /data/sedonoso/memoria/all_results/result-xnli/result_albeto_large \
+  --use_fast_tokenizer \
+  --language es \
+  --train_language es \
+  --do_train \
+  --do_eval \
+  --evaluation_strategy epoch \
+  --learning_rate 1e-6 \
+  --per_device_train_batch_size 8 \
+  --gradient_accumulation_steps 2 \
+  --weight_decay 0.01 \
+  --num_train_epochs 4.0 \
+  --warmup_ratio 0.1 \
+  --load_best_model_at_end True \
+  --logging_dir /data/sedonoso/memoria/all_results/result-xnli/result_albeto_large \
+  --save_strategy epoch \
+  --seed 42 \
+  --fp16 \
+ --cache_dir /data/sedonoso/cache

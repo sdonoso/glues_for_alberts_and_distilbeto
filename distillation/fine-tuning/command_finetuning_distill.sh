@@ -1,0 +1,143 @@
+python run_xnli.py \
+  --model_name_or_path /data/sedonoso/modelos/distill-bert  \
+  --max_seq_length 512 \
+  --output_dir /data/sedonoso/memoria/all_results/result-xnli/result_distill_sbert \
+  --use_fast_tokenizer True \
+  --language es \
+  --train_language es \
+  --do_train \
+  --do_eval \
+  --evaluation_strategy epoch \
+  --learning_rate 5e-5 \
+  --per_device_train_batch_size 32 \
+  --weight_decay 0.01 \
+  --num_train_epochs 4.0 \
+  --warmup_ratio 0.1 \
+  --load_best_model_at_end True \
+  --logging_dir /data/sedonoso/memoria/all_results/result-xnli/result_distill_sbert \
+  --save_strategy epoch \
+  --seed 42 \
+  --fp16 true \
+  --do_lower_case True \
+  --overwrite_output_dir \
+  --cache_dir /data/sedonoso/cache \
+;
+python run_pos.py \
+  --model_name_or_path /data/sedonoso/modelos/distill-bert \
+  --max_seq_length 512 \
+  --output_dir /data/sedonoso/memoria/all_results/result-pos/result_distill_sbert \
+  --do_train \
+  --do_eval \
+  --evaluation_strategy epoch \
+  --learning_rate 3e-5 \
+  --per_device_train_batch_size 32 \
+  --weight_decay 0.01 \
+  --num_train_epochs 4.0 \
+  --warmup_ratio 0.1 \
+  --load_best_model_at_end True \
+  --logging_dir /data/sedonoso/memoria/all_results/result-pos/result_distill_sbert \
+  --save_strategy epoch \
+  --seed 42 \
+  --fp16 true \
+  --do_lower_case True \
+  --cache_dir /data/sedonoso/cache \
+;
+python run_glue.py \
+  --model_name_or_path /data/sedonoso/modelos/distill-bert \
+  --max_seq_length 512 \
+  --train_file /data/sedonoso/datasets/PAWS-X/translated_train.json \
+  --validation_file /data/sedonoso/datasets/PAWS-X/dev_2k.json \
+  --output_dir /data/sedonoso/memoria/all_results/result-paws-x/result_distill_sbert \
+  --use_fast_tokenizer True \
+  --do_train \
+  --do_eval \
+  --evaluation_strategy epoch \
+  --learning_rate 5e-5 \
+  --per_device_train_batch_size 32 \
+  --weight_decay 0.01 \
+  --num_train_epochs 4.0 \
+  --warmup_ratio 0.1 \
+  --load_best_model_at_end True \
+  --logging_dir /data/sedonoso/memoria/all_results/result-paws-x/result_distill_sbert \
+  --save_strategy epoch \
+  --seed 42 \
+  --fp16 true \
+  --cache_dir /data/sedonoso/cache \
+;
+python run_ner.py \
+  --model_name_or_path /data/sedonoso/modelos/distill-bert \
+  --max_seq_length 512 \
+  --output_dir /data/sedonoso/memoria/all_results/result-ner-c/result_distill_sbert \
+  --use_fast_tokenizer True \
+  --do_train \
+  --do_eval \
+  --evaluation_strategy epoch \
+  --learning_rate 5e-5 \
+  --per_device_train_batch_size 32 \
+  --weight_decay 0.01 \
+  --num_train_epochs 4.0 \
+  --warmup_ratio 0.1 \
+  --load_best_model_at_end True \
+  --logging_dir /data/sedonoso/memoria/all_results/result-ner-c/result_distill_sbert \
+  --save_strategy epoch \
+  --seed 42 \
+  --fp16 True \
+  --do_lower_case True \
+  --overwrite_output_dir \
+  --cache_dir /data/sedonoso/cache \
+;
+python run_qa.py \
+  --model_name_or_path  /data/sedonoso/modelos/distill-bert \
+  --train_file /data/sedonoso/datasets/QA/MLQA/es_squad-translate-train-train-v1.1.json \
+  --validation_file /data/sedonoso/datasets/QA/MLQA/es_squad-translate-train-dev-v1.1.json \
+  --max_seq_length 384 \
+  --output_dir /data/sedonoso/memoria/all_results/result-qa-mlqa/result_distill_sbert \
+  --do_train \
+  --do_eval \
+  --evaluation_strategy epoch \
+  --learning_rate 3e-5 \
+  --per_device_train_batch_size 16 \
+  --gradient_accumulation_steps 2 \
+  --weight_decay 0.01 \
+  --num_train_epochs 4.0 \
+  --warmup_ratio 0.1 \
+  --doc_stride 128 \
+  --logging_dir /data/sedonoso/all_results/result-qa-mlqa/result_distill_sbert \
+  --save_strategy epoch \
+  --seed 42 \
+  --fp16 \
+  --cache_dir /data/sedonoso/cache \
+;
+python run_qa.py \
+  --model_name_or_path  /data/sedonoso/modelos/distill-bert \
+  --train_file /data/sedonoso/datasets/QA/TAR/train-v1.1-es.json \
+  --validation_file /data/sedonoso/datasets/QA/TAR/dev-v1.1-es.json \
+  --max_seq_length 384 \
+  --output_dir /data/sedonoso/memoria/all_results/result-qa-tar/result_distill_sbert \
+  --do_train \
+  --do_eval \
+  --evaluation_strategy epoch \
+  --learning_rate 3e-5 \
+  --per_device_train_batch_size 32 \
+  --weight_decay 0.01 \
+  --num_train_epochs 4.0 \
+  --warmup_ratio 0.1 \
+  --doc_stride 128 \
+  --logging_dir /data/sedonoso/memoria/all_results/result-qa-tar/result_distill_sbert \
+  --save_strategy epoch \
+  --seed 42 \
+  --fp16 \
+  --cache_dir /data/sedonoso/cache \
+;
+python finetune_mldoc.py \
+  --model-dir /data/sedonoso/modelos/distill-bert \
+  --data-dir /data/sedonoso/datasets/MLDoC \
+  --output-dir /data/sedonoso/memoria/all_results/result-mldoc/result_distill_sbert \
+  --do-lower-case \
+  --learn-rate 3e-5 \
+  --batch-size 32 \
+  --epochs 3 \
+  --max-seq-len 512 \
+  --weight-decay 0.01 \
+  --warmup 0.1 \
+  --seed 42 \

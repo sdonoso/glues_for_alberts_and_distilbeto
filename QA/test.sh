@@ -1,0 +1,18 @@
+python run_qa.py \
+  --model_name_or_path  /home/sdonoso/Documents/memoria/pytorch-models/albeto_base/ \
+  --do_train \
+  --do_eval \
+  --train_file /home/sdonoso/Documents/memoria/datasets/QuestionAnswering/TranslateAlignRetrieve-master/SQuAD-es-v1.1/train-v1.1-es.json \
+  --validation_file /home/sdonoso/Documents/memoria/datasets/QuestionAnswering/TranslateAlignRetrieve-master/SQuAD-es-v1.1/dev-v1.1-es.json \
+  --per_device_train_batch_size 1 \
+  --max_steps 1 \
+  --max_train_samples 10 \
+  --max_eval_samples 10 \
+  --max_predict_samples 10 \
+  --learning_rate 3e-5 \
+  --num_train_epochs 1 \
+  --max_seq_length 512 \
+  --doc_stride 128 \
+  --output_dir  /home/sdonoso/Documents/results/ \
+  --overwrite_output_dir \
+  --save_steps -1
